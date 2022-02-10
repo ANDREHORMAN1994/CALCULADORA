@@ -22,8 +22,8 @@ class App extends React.Component {
           0
         </div>
         {
-          calculadora.map((linha) => (
-            <Linha line={linha} />
+          calculadora.map((linha, i) => (
+            <Linha line={linha} key={i} />
           ))
         }
         

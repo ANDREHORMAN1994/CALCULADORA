@@ -1,13 +1,21 @@
 import React from 'react';
 
 class Botao extends React.Component {
+
+  handleClick = ({ target }) => {
+    console.log(target.innerText);
+  }
+
   render() {
     const { number } = this.props;
 
     return (
-      <p className='botao'>
+      <button
+        className='botao'
+        onClick={ this.handleClick }
+      >
         {number}
-      </p>
+      </button>
     )
   }
 }
